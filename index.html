@@ -1,1 +1,555 @@
-test
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineTone — Film Score Composer | Marcus Hale</title>
+  <meta name="description" content="Marcus Hale is a film score composer crafting orchestral and electronic music for cinema, games, and trailers. Available for collaboration." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marcus Hale",
+    "jobTitle": "Film Score Composer",
+    "url": "https://cinetone.com",
+    "sameAs": ["https://www.imdb.com","https://soundcloud.com","https://www.youtube.com"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="CineTone home">
+        <span class="nav-logo-mark" aria-hidden="true"><i class="ph ph-waveform"></i></span>
+        CineTone
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Journal</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-theme-toggle id="theme-toggle-nav" aria-label="Toggle theme">
+          <i class="theme-icon ph ph-moon"></i>
+        </button>
+        <button class="nav-icon-btn" data-rtl-toggle id="rtl-toggle-nav" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="contact.html" class="nav-reach-btn">Reach Me</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── DRAWER ─────────────────────────────────────────── -->
+  <div class="drawer-overlay" id="drawer-overlay" role="presentation"></div>
+  <aside class="drawer" id="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-mark" aria-hidden="true"><i class="ph ph-waveform"></i></span> CineTone</a>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Journal</a>
+    </nav>
+    <div class="drawer-footer">
+      <div class="drawer-actions">
+        <button class="nav-icon-btn" data-theme-toggle aria-label="Toggle theme">
+          <i class="theme-icon ph ph-moon"></i>
+        </button>
+        <button class="nav-icon-btn" data-rtl-toggle aria-label="Toggle direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Reach Me</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ─── HERO ──────────────────────────────────────────── -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-image"></div>
+        <div class="hero-grid-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <div class="hero-eyebrow-line"></div>
+            <span class="hero-eyebrow-text">Film Score Composer</span>
+          </div>
+          <h1>
+            Music that lives<br>
+            <em>between frames</em>
+          </h1>
+          <p class="hero-lead">
+            I'm Marcus Hale — I compose orchestral and electronic scores for cinema, games, and trailers. Every project begins with silence and ends with something that moves people.
+          </p>
+          <div class="hero-cta">
+            <a href="contact.html" class="btn btn-primary">
+              <i class="ph ph-envelope"></i> Start a Project
+            </a>
+            <a href="#demo-reel" class="btn btn-outline">
+              <i class="ph ph-play-circle"></i> Hear My Work
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-value">47</div>
+              <div class="hero-stat-label">Projects Scored</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">12</div>
+              <div class="hero-stat-label">Film Credits</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">8+</div>
+              <div class="hero-stat-label">Years Active</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <img
+              src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=700&q=80"
+              alt="Marcus Hale composing at his studio"
+              class="hero-card-image"
+              loading="eager"
+            />
+            <div class="hero-card-player">
+              <button class="play-btn" aria-label="Play demo track">
+                <i class="ph ph-play"></i>
+              </button>
+              <div class="player-info">
+                <div class="player-title">Dusk Protocol — Main Theme</div>
+                <div class="player-meta">Orchestral · 2024</div>
+              </div>
+              <div class="waveform-bar" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="player-duration">2:47</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── REEL MARQUEE STRIP ────────────────────────────── -->
+    <div class="reel-strip" aria-hidden="true">
+      <div class="reel-track">
+        <span class="reel-item"><span class="reel-dot"></span> Orchestral Scoring</span>
+        <span class="reel-item"><span class="reel-dot"></span> Electronic Soundscapes</span>
+        <span class="reel-item"><span class="reel-dot"></span> Trailer Music</span>
+        <span class="reel-item"><span class="reel-dot"></span> Video Game Audio</span>
+        <span class="reel-item"><span class="reel-dot"></span> Hybrid Composition</span>
+        <span class="reel-item"><span class="reel-dot"></span> Sound Design</span>
+        <!-- duplicate for seamless loop -->
+        <span class="reel-item"><span class="reel-dot"></span> Orchestral Scoring</span>
+        <span class="reel-item"><span class="reel-dot"></span> Electronic Soundscapes</span>
+        <span class="reel-item"><span class="reel-dot"></span> Trailer Music</span>
+        <span class="reel-item"><span class="reel-dot"></span> Video Game Audio</span>
+        <span class="reel-item"><span class="reel-dot"></span> Hybrid Composition</span>
+        <span class="reel-item"><span class="reel-dot"></span> Sound Design</span>
+      </div>
+    </div>
+
+    <!-- ─── WHAT I DO ─────────────────────────────────────── -->
+    <section class="section works" id="services" aria-label="Services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow" style="text-align:center;display:block;">What I Do</span>
+          <h2 class="section-heading">Composing across every screen</h2>
+          <p class="section-subtext">From intimate indie films to AAA game titles — I bring emotional depth through music that serves the story.</p>
+        </div>
+        <div class="works-grid reveal">
+          <div class="work-card">
+            <div class="work-icon"><i class="ph ph-film-strip"></i></div>
+            <h3>Film Scoring</h3>
+            <p>Full orchestral and hybrid scores for feature films, shorts, and documentaries. I work closely with directors to find the emotional truth of every scene.</p>
+          </div>
+          <div class="work-card">
+            <div class="work-icon"><i class="ph ph-game-controller"></i></div>
+            <h3>Game Audio</h3>
+            <p>Adaptive, looping, and event-driven soundscapes for interactive experiences. Delivered in Wwise-ready stems or direct middleware integration.</p>
+          </div>
+          <div class="work-card">
+            <div class="work-icon"><i class="ph ph-lightning"></i></div>
+            <h3>Trailer Music</h3>
+            <p>Tension-building, epic, and emotionally charged compositions designed to sell cinematic vision in under two minutes.</p>
+          </div>
+          <div class="work-card">
+            <div class="work-icon"><i class="ph ph-headphones"></i></div>
+            <h3>Electronic Score</h3>
+            <p>Modular synthesis, ambient pads, and textural electronics for sci-fi, thriller, and experimental projects that need a modern sonic identity.</p>
+          </div>
+          <div class="work-card">
+            <div class="work-icon"><i class="ph ph-piano-keys"></i></div>
+            <h3>Theme Composition</h3>
+            <p>Memorable main themes and leitmotifs that define characters, worlds, and emotional arcs — the kind of music audiences hum on the way home.</p>
+          </div>
+          <div class="work-card">
+            <div class="work-icon"><i class="ph ph-equalizer"></i></div>
+            <h3>Sound Design</h3>
+            <p>Layered sound design woven into music, from foley textures to atmospheric ambience that blurs the line between score and environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DEMO REEL ─────────────────────────────────────── -->
+    <section class="section demo-reel" id="demo-reel" aria-label="Demo reel samples">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow" style="text-align:center;display:block;">Listen</span>
+          <h2 class="section-heading">Selected compositions</h2>
+          <p class="section-subtext">A curated selection of recent work across genres and formats.</p>
+        </div>
+        <div class="reel-gallery reveal">
+          <div class="reel-card">
+            <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=600&q=80" alt="Dusk Protocol — cyberpunk thriller score" class="reel-thumb" loading="lazy" />
+            <div class="reel-card-overlay">
+              <div class="reel-card-play"><i class="ph ph-play"></i></div>
+              <div class="reel-card-info">
+                <div class="reel-card-genre">Hybrid Orchestral</div>
+                <div class="reel-card-title">Dusk Protocol</div>
+                <div class="reel-card-duration">3:14 · Feature Film · 2024</div>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80" alt="Echoes of Veil — fantasy game score" class="reel-thumb" loading="lazy" />
+            <div class="reel-card-overlay">
+              <div class="reel-card-play"><i class="ph ph-play"></i></div>
+              <div class="reel-card-info">
+                <div class="reel-card-genre">Fantasy / Orchestral</div>
+                <div class="reel-card-title">Echoes of Veil</div>
+                <div class="reel-card-duration">2:58 · Video Game · 2023</div>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80" alt="Neon Hollow — electronic ambient score" class="reel-thumb" loading="lazy" />
+            <div class="reel-card-overlay">
+              <div class="reel-card-play"><i class="ph ph-play"></i></div>
+              <div class="reel-card-info">
+                <div class="reel-card-genre">Electronic · Ambient</div>
+                <div class="reel-card-title">Neon Hollow</div>
+                <div class="reel-card-duration">4:02 · Short Film · 2023</div>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80" alt="The Weight of Stars — documentary score" class="reel-thumb" loading="lazy" />
+            <div class="reel-card-overlay">
+              <div class="reel-card-play"><i class="ph ph-play"></i></div>
+              <div class="reel-card-info">
+                <div class="reel-card-genre">Documentary</div>
+                <div class="reel-card-title">The Weight of Stars</div>
+                <div class="reel-card-duration">2:33 · Documentary · 2022</div>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card">
+            <img src="https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=600&q=80" alt="Fractured Bloom — trailer score" class="reel-thumb" loading="lazy" />
+            <div class="reel-card-overlay">
+              <div class="reel-card-play"><i class="ph ph-play"></i></div>
+              <div class="reel-card-info">
+                <div class="reel-card-genre">Trailer · Epic</div>
+                <div class="reel-card-title">Fractured Bloom</div>
+                <div class="reel-card-duration">1:45 · Trailer · 2024</div>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card">
+            <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600&q=80" alt="Quiet Meridian — chamber score" class="reel-thumb" loading="lazy" />
+            <div class="reel-card-overlay">
+              <div class="reel-card-play"><i class="ph ph-play"></i></div>
+              <div class="reel-card-info">
+                <div class="reel-card-genre">Chamber · Intimate</div>
+                <div class="reel-card-title">Quiet Meridian</div>
+                <div class="reel-card-duration">3:40 · Indie Film · 2022</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─────────────────────────────────────────── -->
+    <section class="section about" id="about" aria-label="About Marcus Hale">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-image-wrap reveal">
+            <img
+              src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&q=80"
+              alt="Marcus Hale at his composing workstation"
+              class="about-portrait"
+              loading="lazy"
+            />
+            <div class="about-image-accent" aria-label="8 years experience">
+              8<small>yrs</small>
+            </div>
+          </div>
+          <div class="about-content reveal">
+            <span class="section-eyebrow">The Composer</span>
+            <h2>A cinematic ear, a technical mind</h2>
+            <p class="about-lead">"I grew up watching films twice — once for the story, once for what the music was doing to me."</p>
+            <div class="about-body">
+              <p>I'm Marcus Hale, a composer based between London and Berlin. I studied composition at the Royal College of Music before spending years as an orchestrator for larger productions — learning how music earns its place in a story frame by frame.</p>
+              <p style="margin-block-start: 1rem;">Today I work independently on projects I believe in: films that take emotional risks, games that build worlds, and trailers that demand attention. My process starts with a conversation about what you want audiences to feel — not just hear.</p>
+            </div>
+            <div class="about-skills">
+              <span class="skill-tag">Orchestral</span>
+              <span class="skill-tag">Modular Synth</span>
+              <span class="skill-tag">Wwise</span>
+              <span class="skill-tag">Logic Pro X</span>
+              <span class="skill-tag">Spitfire Audio</span>
+              <span class="skill-tag">Hybrid Scoring</span>
+              <span class="skill-tag">Live Recording</span>
+              <span class="skill-tag">Sound Design</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary">
+              <i class="ph ph-paper-plane-tilt"></i> Let's Collaborate
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ──────────────────────────────────────── -->
+    <section class="section projects" id="projects" aria-label="Selected projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow" style="text-align:center;display:block;">Case Studies</span>
+          <h2 class="section-heading">Behind the score</h2>
+          <p class="section-subtext">Click any project to read about the creative process behind it.</p>
+        </div>
+        <div class="projects-list reveal">
+          <div class="project-item">
+            <div class="project-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="project-header-left">
+                <span class="project-number">01</span>
+                <div class="project-meta">
+                  <h3>Dusk Protocol</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Feature Film</span>
+                    <span class="project-tag">Hybrid</span>
+                    <span class="project-tag">2024</span>
+                  </div>
+                </div>
+              </div>
+              <span class="project-toggle" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </div>
+            <div class="project-body">
+              <div class="project-body-grid">
+                <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580?w=700&q=80" alt="Dusk Protocol film still" class="project-body-image" loading="lazy" />
+                <div class="project-body-text">
+                  <p>Director Priya Anand wanted a score that felt like the city itself had a heartbeat — synthetic but wounded. I built the main theme around a descending minor third played on a detuned cimbalom, layered with modular pulse sequences.</p>
+                  <p>The result was a score that audiences described as "the most unsettling lullaby they'd ever heard" — which was exactly the brief.</p>
+                  <a href="contact.html" class="btn btn-ghost" style="margin-block-start: 1rem;">Discuss a similar project <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="project-header-left">
+                <span class="project-number">02</span>
+                <div class="project-meta">
+                  <h3>Echoes of Veil</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Video Game</span>
+                    <span class="project-tag">Fantasy</span>
+                    <span class="project-tag">2023</span>
+                  </div>
+                </div>
+              </div>
+              <span class="project-toggle" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </div>
+            <div class="project-body">
+              <div class="project-body-grid">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=700&q=80" alt="Echoes of Veil game environment" class="project-body-image" loading="lazy" />
+                <div class="project-body-text">
+                  <p>For this open-world RPG, I composed 4.2 hours of adaptive music — 68 stems that the Wwise middleware blends in real-time based on player proximity, combat state, and weather conditions.</p>
+                  <p>The main overworld theme was written for solo duduk and string quartet, then expanded into full orchestral versions for key story moments. Players reported being emotionally caught off guard by transitions they couldn't anticipate.</p>
+                  <a href="contact.html" class="btn btn-ghost" style="margin-block-start: 1rem;">Discuss a similar project <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-header" role="button" tabindex="0" aria-expanded="false">
+              <div class="project-header-left">
+                <span class="project-number">03</span>
+                <div class="project-meta">
+                  <h3>The Weight of Stars</h3>
+                  <div class="project-tags">
+                    <span class="project-tag">Documentary</span>
+                    <span class="project-tag">Ambient</span>
+                    <span class="project-tag">2022</span>
+                  </div>
+                </div>
+              </div>
+              <span class="project-toggle" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </div>
+            <div class="project-body">
+              <div class="project-body-grid">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=700&q=80" alt="The Weight of Stars documentary" class="project-body-image" loading="lazy" />
+                <div class="project-body-text">
+                  <p>A feature documentary about the last generation of analog astronomers, this score needed to feel both intimate and cosmic. I recorded an upright piano with half its strings damped with felt, then processed it through a reverb unit designed for cathedral acoustics.</p>
+                  <p>The score won Best Sound at the Edinburgh Documentary Film Festival — the director described it as "the sound of human curiosity."</p>
+                  <a href="contact.html" class="btn btn-ghost" style="margin-block-start: 1rem;">Discuss a similar project <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SCORE DIVIDER ─────────────────────────────────── -->
+    <div class="container">
+      <div class="score-divider" aria-hidden="true">
+        <span class="score-divider-icon"><i class="ph ph-music-notes"></i></span>
+      </div>
+    </div>
+
+    <!-- ─── TESTIMONIALS ──────────────────────────────────── -->
+    <section class="section testimonials" aria-label="Client testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow" style="text-align:center;display:block;">Voices</span>
+          <h2 class="section-heading">What directors say</h2>
+        </div>
+        <div class="testimonials-grid reveal">
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-text">Marcus understood instinctively what I was going for before I could articulate it. The score for Dusk Protocol elevated scenes I thought were already finished.</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Priya Anand" class="author-avatar" loading="lazy" />
+              <div>
+                <div class="author-name">Priya Anand</div>
+                <div class="author-role">Director, Dusk Protocol</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-text">The adaptive music system Marcus built for Echoes of Veil is something our players talk about constantly. It genuinely feels alive. That's rare in game audio.</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Lars Brandt" class="author-avatar" loading="lazy" />
+              <div>
+                <div class="author-name">Lars Brandt</div>
+                <div class="author-role">Lead Designer, Thornwick Studios</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote-mark">"</div>
+            <p class="testimonial-text">Working with Marcus is unlike any composer I've collaborated with. He's technically exceptional but never loses sight of the emotional through-line.</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Celine Dumont" class="author-avatar" loading="lazy" />
+              <div>
+                <div class="author-name">Celine Dumont</div>
+                <div class="author-role">Director, The Weight of Stars</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ───────────────────────────────────────────── -->
+    <section class="cta-section" aria-label="Call to action">
+      <div class="container">
+        <div class="score-divider" style="justify-content:center;margin-block-end:2rem;" aria-hidden="true">
+          <span class="score-divider-icon"><i class="ph ph-film-script"></i></span>
+        </div>
+        <h2>Have a project in mind?</h2>
+        <p>I take on a limited number of projects each quarter to ensure full creative attention. Let's talk about your vision before the slot fills.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-cta-light">
+            <i class="ph ph-paper-plane-tilt"></i> Send a Project Brief
+          </a>
+          <a href="services.html" class="btn btn-cta-ghost">
+            View My Services
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-block-end: 1rem; display: inline-flex;">
+            <span class="nav-logo-mark" aria-hidden="true"><i class="ph ph-waveform"></i></span> CineTone
+          </a>
+          <p>Orchestral and electronic film scores by Marcus Hale. London · Berlin.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="SoundCloud"><i class="ph ph-soundcloud-logo"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="social-link" aria-label="IMDB"><i class="ph ph-film-strip"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html" class="footer-link">Journal</a></li>
+            <li><a href="blog-single.html" class="footer-link">Latest Post</a></li>
+            <li><a href="#demo-reel" class="footer-link">Demo Reel</a></li>
+            <li><a href="404.html" class="footer-link">404 Page</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link">marcus@cinetone.com</span></li>
+            <li><span class="footer-link">+44 20 7946 0831</span></li>
+            <li><span class="footer-link">London, UK</span></li>
+            <li><a href="contact.html" class="footer-link" style="color:var(--accent);margin-block-start:0.5rem;">→ Collaboration Form</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <p class="footer-copy">© 2026 Marcus Hale / CineTone. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

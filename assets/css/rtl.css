@@ -1,0 +1,34 @@
+/* ═══════════════════════════════════════════════════════════
+   CineTone — RTL Overrides
+   ═══════════════════════════════════════════════════════════ */
+
+[dir="rtl"] {
+  /* Flip direction-specific decorative elements */
+}
+
+[dir="rtl"] .hero-eyebrow { flex-direction: row-reverse; }
+[dir="rtl"] .nav-logo { flex-direction: row-reverse; }
+[dir="rtl"] .score-divider::before,
+[dir="rtl"] .score-divider::after { transform: scaleX(-1); }
+[dir="rtl"] .about-image-accent {
+  inset-inline-end: auto;
+  inset-inline-start: -16px;
+}
+[dir="rtl"] .hero-visual-card::before {
+  background: linear-gradient(to left, var(--accent), transparent);
+}
+[dir="rtl"] .project-item .project-toggle {
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+}
+[dir="rtl"] .testimonial-author { flex-direction: row-reverse; }
+[dir="rtl"] .timeline { padding-inline-start: 0; padding-inline-end: var(--space-lg); }
+[dir="rtl"] .timeline::before { inset-inline-start: auto; inset-inline-end: 0; }
+[dir="rtl"] .prose blockquote { border-inline-start: none; border-inline-end: 3px solid var(--accent); padding-inline-start: 0; padding-inline-end: var(--space-md); }
+[dir="rtl"] .reel-track { animation-direction: reverse; }
+[dir="rtl"] .contact-info-item { flex-direction: row-reverse; }
+[dir="rtl"] .footer-social { flex-direction: row-reverse; }
+[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .form-select {
+  background-position: left 1rem center;
+}

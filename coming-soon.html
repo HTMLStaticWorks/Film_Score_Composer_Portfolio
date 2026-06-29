@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon — New Work from Marcus Hale | CineTone</title>
+  <meta name="description" content="Something new is being scored. Marcus Hale is working on a major new project — sign up to hear it first." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+</head>
+<body class="coming-soon-page">
+
+  <!-- Minimal logo bar -->
+  <header class="cs-header" role="banner">
+    <a href="index.html" class="nav-logo" aria-label="Back to CineTone">
+      <span class="nav-logo-mark" aria-hidden="true"><i class="ph ph-waveform"></i></span>
+      CineTone
+    </a>
+    <div class="cs-header-actions">
+      <button class="nav-icon-btn" data-theme-toggle id="theme-toggle-nav" aria-label="Toggle theme">
+        <i class="theme-icon ph ph-moon"></i>
+      </button>
+      <button class="nav-icon-btn" data-rtl-toggle id="rtl-toggle-nav" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="cs-main" role="main">
+
+    <!-- ─── Background ambient ────────────────────────────── -->
+    <div class="cs-bg" aria-hidden="true">
+      <div class="cs-score-lines">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="cs-ambient-glow"></div>
+    </div>
+
+    <!-- ─── Content ──────────────────────────────────────── -->
+    <div class="cs-inner">
+
+      <!-- Waveform animation -->
+      <div class="cs-waveform" aria-hidden="true">
+        <div class="cs-wave-bars">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="cs-content">
+        <p class="cs-eyebrow">
+          <i class="ph ph-metronome" aria-hidden="true"></i>
+          Something is being scored
+        </p>
+
+        <h1>A new reel<br><em>is in production.</em></h1>
+
+        <p class="cs-lead">
+          I'm working on something I'm genuinely excited about — a major new orchestral project. The silence before the first note is always the most important part.
+        </p>
+
+        <!-- Countdown -->
+        <div class="cs-countdown" id="countdown" aria-label="Countdown to launch">
+          <div class="cs-countdown-unit">
+            <span class="cs-count-num" id="days" aria-live="polite">00</span>
+            <span class="cs-count-label">Days</span>
+          </div>
+          <div class="cs-countdown-sep" aria-hidden="true">:</div>
+          <div class="cs-countdown-unit">
+            <span class="cs-count-num" id="hours" aria-live="polite">00</span>
+            <span class="cs-count-label">Hours</span>
+          </div>
+          <div class="cs-countdown-sep" aria-hidden="true">:</div>
+          <div class="cs-countdown-unit">
+            <span class="cs-count-num" id="minutes" aria-live="polite">00</span>
+            <span class="cs-count-label">Minutes</span>
+          </div>
+          <div class="cs-countdown-sep" aria-hidden="true">:</div>
+          <div class="cs-countdown-unit">
+            <span class="cs-count-num" id="seconds" aria-live="polite">00</span>
+            <span class="cs-count-label">Seconds</span>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <form class="cs-form" id="cs-form" novalidate aria-label="Newsletter signup">
+          <div class="cs-form-row">
+            <div class="cs-input-wrap">
+              <label for="cs-email" class="sr-only">Your email address</label>
+              <input
+                type="email"
+                id="cs-email"
+                name="email"
+                class="cs-input"
+                placeholder="your@email.com"
+                autocomplete="email"
+                aria-required="true"
+              />
+              <i class="ph ph-envelope cs-input-icon" aria-hidden="true"></i>
+            </div>
+            <button type="submit" class="btn btn-primary cs-submit-btn">
+              <i class="ph ph-bell-ringing" aria-hidden="true"></i>
+              Notify Me
+            </button>
+          </div>
+          <p class="cs-form-error" id="cs-form-error" role="alert" aria-live="assertive"></p>
+          <p class="cs-form-success" id="cs-form-success" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="cs-privacy">
+          <i class="ph ph-lock-simple" aria-hidden="true"></i>
+          No spam. Just one email when the work drops.
+        </p>
+
+        <!-- Quick links -->
+        <div class="cs-links">
+          <a href="index.html" class="cs-link">
+            <i class="ph ph-house" aria-hidden="true"></i> Back to Home
+          </a>
+          <span class="cs-link-sep" aria-hidden="true">·</span>
+          <a href="blog.html" class="cs-link">
+            <i class="ph ph-article" aria-hidden="true"></i> Read Journal
+          </a>
+          <span class="cs-link-sep" aria-hidden="true">·</span>
+          <a href="contact.html" class="cs-link">
+            <i class="ph ph-envelope" aria-hidden="true"></i> Get in Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Social strip -->
+      <div class="cs-social" aria-label="Social media links">
+        <a href="#" class="social-link" aria-label="SoundCloud"><i class="ph ph-soundcloud-logo"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="#" class="social-link" aria-label="IMDB"><i class="ph ph-film-strip"></i></a>
+      </div>
+
+    </div>
+    <!-- /cs-inner -->
+
+  </main>
+
+  <!-- ─── FOOTER note ───────────────────────────────────── -->
+  <footer class="cs-footer" role="contentinfo">
+    <p class="footer-copy">© 2026 Marcus Hale / CineTone. All rights reserved.</p>
+  </footer>
+
+  <style>
+    /* ── COMING SOON PAGE STYLES ─────────────────────────── */
+
+    .coming-soon-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─ */
+    .cs-header {
+      position: fixed;
+      top: 0;
+      inset-inline: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2.5rem;
+    }
+
+    .cs-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* ── Main layout ─ */
+    .cs-main {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── Background ─ */
+    .cs-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .cs-score-lines {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2.8rem;
+      padding-block: 15%;
+      opacity: 0.04;
+    }
+
+    .cs-score-lines span {
+      display: block;
+      height: 1px;
+      background: var(--fg);
+      width: 100%;
+    }
+
+    .cs-ambient-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60vw;
+      height: 60vw;
+      max-width: 700px;
+      max-height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 8%, transparent) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Inner ─ */
+    .cs-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2.5rem;
+      padding: 9rem 2rem 4rem;
+      width: 100%;
+      max-width: 780px;
+      margin-inline: auto;
+    }
+
+    /* ── Waveform ─ */
+    .cs-waveform {
+      animation: fadeSlideUp 0.7s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    .cs-wave-bars {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      height: 56px;
+    }
+
+    .cs-wave-bars span {
+      display: block;
+      width: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+      animation: csWave 1.6s ease-in-out infinite;
+      opacity: 0.6;
+    }
+
+    .cs-wave-bars span:nth-child(1)  { height: 20%; animation-delay: 0.00s; }
+    .cs-wave-bars span:nth-child(2)  { height: 40%; animation-delay: 0.08s; }
+    .cs-wave-bars span:nth-child(3)  { height: 65%; animation-delay: 0.16s; }
+    .cs-wave-bars span:nth-child(4)  { height: 85%; animation-delay: 0.24s; }
+    .cs-wave-bars span:nth-child(5)  { height: 100%; animation-delay: 0.32s; }
+    .cs-wave-bars span:nth-child(6)  { height: 75%; animation-delay: 0.40s; }
+    .cs-wave-bars span:nth-child(7)  { height: 50%; animation-delay: 0.48s; }
+    .cs-wave-bars span:nth-child(8)  { height: 90%; animation-delay: 0.56s; }
+    .cs-wave-bars span:nth-child(9)  { height: 60%; animation-delay: 0.64s; }
+    .cs-wave-bars span:nth-child(10) { height: 100%; animation-delay: 0.72s; }
+    .cs-wave-bars span:nth-child(11) { height: 70%; animation-delay: 0.80s; }
+    .cs-wave-bars span:nth-child(12) { height: 45%; animation-delay: 0.88s; }
+    .cs-wave-bars span:nth-child(13) { height: 80%; animation-delay: 0.96s; }
+    .cs-wave-bars span:nth-child(14) { height: 55%; animation-delay: 1.04s; }
+    .cs-wave-bars span:nth-child(15) { height: 95%; animation-delay: 1.12s; }
+    .cs-wave-bars span:nth-child(16) { height: 65%; animation-delay: 1.20s; }
+    .cs-wave-bars span:nth-child(17) { height: 35%; animation-delay: 1.28s; }
+    .cs-wave-bars span:nth-child(18) { height: 50%; animation-delay: 1.36s; }
+    .cs-wave-bars span:nth-child(19) { height: 25%; animation-delay: 1.44s; }
+    .cs-wave-bars span:nth-child(20) { height: 15%; animation-delay: 1.52s; }
+
+    @keyframes csWave {
+      0%, 100% { transform: scaleY(1); }
+      50%       { transform: scaleY(0.2); }
+    }
+
+    /* ── Content ─ */
+    .cs-content {
+      animation: fadeSlideUp 0.7s 0.1s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    .cs-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-size: var(--size-caption);
+      font-weight: var(--weight-label);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-block-end: 1.25rem;
+    }
+
+    .cs-content h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: var(--weight-h1);
+      color: var(--fg);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-block-end: 1.25rem;
+    }
+
+    .cs-content h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .cs-lead {
+      font-size: var(--size-lead);
+      color: var(--fg-muted);
+      max-width: 52ch;
+      margin-inline: auto;
+      margin-block-end: 2.5rem;
+      line-height: 1.65;
+    }
+
+    /* ── Countdown ─ */
+    .cs-countdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-block-end: 2.5rem;
+    }
+
+    .cs-countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      min-width: 80px;
+    }
+
+    .cs-count-num {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: var(--weight-h1);
+      color: var(--fg);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cs-count-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: var(--weight-label);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .cs-countdown-sep {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: var(--weight-h2);
+      color: var(--accent);
+      padding-block-end: 1.5rem;
+      line-height: 1;
+    }
+
+    /* ── Form ─ */
+    .cs-form {
+      margin-block-end: 0.75rem;
+    }
+
+    .cs-form-row {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cs-input-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 240px;
+      max-width: 360px;
+    }
+
+    .cs-input {
+      width: 100%;
+      padding: 0.85rem 1rem 0.85rem 2.8rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: var(--size-body);
+      color: var(--fg);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .cs-input::placeholder {
+      color: var(--fg-muted);
+      opacity: 0.6;
+    }
+
+    .cs-input:focus {
+      border-color: var(--accent);
+    }
+
+    .cs-input.is-error {
+      border-color: #e05c5c;
+    }
+
+    .cs-input-icon {
+      position: absolute;
+      inset-inline-start: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--fg-muted);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    .cs-submit-btn {
+      flex-shrink: 0;
+    }
+
+    .cs-form-error {
+      font-size: var(--size-caption);
+      color: #e05c5c;
+      margin-block-start: 0.5rem;
+      min-height: 1.2em;
+    }
+
+    .cs-form-success {
+      font-size: var(--size-caption);
+      color: #5cb85c;
+      margin-block-start: 0.5rem;
+      min-height: 1.2em;
+    }
+
+    .cs-privacy {
+      font-size: 0.78rem;
+      color: var(--fg-muted);
+      opacity: 0.7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      margin-block-start: 0.75rem;
+    }
+
+    /* ── Links ─ */
+    .cs-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-block-start: 0.5rem;
+    }
+
+    .cs-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-body);
+      font-size: var(--size-caption);
+      font-weight: var(--weight-label);
+      color: var(--fg-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .cs-link:hover {
+      color: var(--accent);
+    }
+
+    .cs-link-sep {
+      color: var(--border);
+    }
+
+    /* ── Social ─ */
+    .cs-social {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      animation: fadeSlideUp 0.7s 0.3s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    /* ── Footer ─ */
+    .cs-footer {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      border-block-start: 1px solid var(--border);
+    }
+
+    /* ── Responsive ─ */
+    @media (max-width: 600px) {
+      .cs-header {
+        padding: 1.25rem 1.25rem;
+      }
+
+      .cs-countdown-unit {
+        min-width: 60px;
+      }
+
+      .cs-countdown {
+        gap: 0.25rem;
+      }
+
+      .cs-form-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cs-input-wrap {
+        max-width: 100%;
+      }
+
+      .cs-submit-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .cs-wave-bars span:nth-child(n+15) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .cs-inner {
+        padding: 7rem 1.25rem 3rem;
+        gap: 1.75rem;
+      }
+
+      .cs-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cs-link-sep {
+        display: none;
+      }
+
+      .cs-countdown-unit {
+        min-width: 50px;
+      }
+
+      .cs-countdown-sep {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* ── Reduced motion ─ */
+    @media (prefers-reduced-motion: reduce) {
+      .cs-wave-bars span,
+      .cs-waveform,
+      .cs-content {
+        animation: none;
+      }
+    }
+
+    /* ── Screen reader only ─ */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // ── Coming Soon countdown ──────────────────────────────
+    (function () {
+      // Target: 90 days from now
+      const target = new Date();
+      target.setDate(target.getDate() + 90);
+      target.setHours(0, 0, 0, 0);
+
+      const daysEl    = document.getElementById('days');
+      const hoursEl   = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      function pad(n) {
+        return String(n).padStart(2, '0');
+      }
+
+      function tick() {
+        const now  = Date.now();
+        const diff = target - now;
+
+        if (diff <= 0) {
+          daysEl.textContent    = '00';
+          hoursEl.textContent   = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+
+        const days    = Math.floor(diff / 86400000);
+        const hours   = Math.floor((diff % 86400000) / 3600000);
+        const minutes = Math.floor((diff % 3600000) / 60000);
+        const seconds = Math.floor((diff % 60000) / 1000);
+
+        daysEl.textContent    = pad(days);
+        hoursEl.textContent   = pad(hours);
+        minutesEl.textContent = pad(minutes);
+        secondsEl.textContent = pad(seconds);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+
+      // ── Newsletter form ──────────────────────────────────
+      const form    = document.getElementById('cs-form');
+      const input   = document.getElementById('cs-email');
+      const errEl   = document.getElementById('cs-form-error');
+      const succEl  = document.getElementById('cs-form-success');
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          errEl.textContent  = '';
+          succEl.textContent = '';
+          input.classList.remove('is-error');
+
+          const val = input.value.trim();
+
+          if (!val) {
+            input.classList.add('is-error');
+            errEl.textContent = 'Please enter your email address.';
+            input.focus();
+            return;
+          }
+
+          if (!emailRx.test(val)) {
+            input.classList.add('is-error');
+            errEl.textContent = 'Please enter a valid email address.';
+            input.focus();
+            return;
+          }
+
+          // ── Mailchimp embed goes here ──────────────────
+          // Replace the block below with your actual Mailchimp POST action
+          /*
+          fetch('https://yourdomain.us1.list-manage.com/subscribe/post?u=XXXX&id=XXXX', {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'no-cors'
+          });
+          */
+
+          // Simulated success
+          succEl.textContent = 'You\'re on the list. I\'ll send one email when it\'s ready.';
+          input.value = '';
+        });
+
+        input.addEventListener('input', function () {
+          input.classList.remove('is-error');
+          errEl.textContent = '';
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
