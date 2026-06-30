@@ -1696,6 +1696,13 @@ textarea.form-control {
   margin-block-end: var(--space-xl);
 }
 
+.footer-brand .nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  margin-block-end: 1rem !important;
+  margin-block-start: -6px !important;
+}
+
 .footer-brand p {
   font-size: var(--s-label);
   color: var(--text-muted);
@@ -1709,20 +1716,23 @@ textarea.form-control {
 }
 
 .social-link {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   transition: all var(--transition);
+  border-radius: var(--radius-sm);
 }
 
 .social-link:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--bg-primary);
+  background: var(--accent);
+  transform: translateY(-2px);
 }
 
 .footer-col-title {
@@ -1743,11 +1753,13 @@ textarea.form-control {
 .footer-link {
   font-size: var(--s-label);
   color: var(--text-muted);
-  transition: color var(--transition);
+  transition: color var(--transition), transform var(--transition);
+  display: inline-block;
 }
 
 .footer-link:hover {
   color: var(--accent);
+  transform: translateX(4px);
 }
 
 .footer-bottom {
@@ -2140,12 +2152,18 @@ textarea.form-control {
   padding-block-start: calc(72px + var(--space-xl));
   padding-block-end: var(--space-xl);
   background: var(--bg-secondary);
+  text-align: center;
 }
 
 .blog-single-hero h1 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   margin-block: var(--space-md);
   max-width: 800px;
+  margin-inline: auto;
+}
+
+.blog-single-hero .blog-meta {
+  justify-content: center;
 }
 
 .blog-single-content {
@@ -2155,6 +2173,7 @@ textarea.form-control {
 .blog-single-content .prose {
   max-width: 720px;
   margin-inline: auto;
+  text-align: center;
 }
 
 .prose h2 {
@@ -2509,11 +2528,6 @@ textarea.form-control {
   }
 
 
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
-  }
 
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);

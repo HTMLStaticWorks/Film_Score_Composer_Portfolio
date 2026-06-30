@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon — New Work from Marcus Hale | CineTone</title>
-  <meta name="description" content="Something new is being scored. Marcus Hale is working on a major new project — sign up to hear it first." />
+  <meta name="description"
+    content="Something new is being scored. Marcus Hale is working on a major new project — sign up to hear it first." />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
+
 <body class="coming-soon-page">
 
   <!-- Minimal logo bar -->
@@ -59,7 +63,8 @@
         <h1>A new reel<br><em>is in production.</em></h1>
 
         <p class="cs-lead">
-          I'm working on something I'm genuinely excited about — a major new orchestral project. The silence before the first note is always the most important part.
+          I'm working on something I'm genuinely excited about — a major new orchestral project. The silence before the
+          first note is always the most important part.
         </p>
 
         <!-- Countdown -->
@@ -90,15 +95,8 @@
           <div class="cs-form-row">
             <div class="cs-input-wrap">
               <label for="cs-email" class="sr-only">Your email address</label>
-              <input
-                type="email"
-                id="cs-email"
-                name="email"
-                class="cs-input"
-                placeholder="your@email.com"
-                autocomplete="email"
-                aria-required="true"
-              />
+              <input type="email" id="cs-email" name="email" class="cs-input" placeholder="your@email.com"
+                autocomplete="email" aria-required="true" />
               <i class="ph ph-envelope cs-input-icon" aria-hidden="true"></i>
             </div>
             <button type="submit" class="btn btn-primary cs-submit-btn">
@@ -243,7 +241,7 @@
 
     /* ── Waveform ─ */
     .cs-waveform {
-      animation: fadeSlideUp 0.7s cubic-bezier(.16,1,.3,1) both;
+      animation: fadeSlideUp 0.7s cubic-bezier(.16, 1, .3, 1) both;
     }
 
     .cs-wave-bars {
@@ -262,35 +260,121 @@
       opacity: 0.6;
     }
 
-    .cs-wave-bars span:nth-child(1)  { height: 20%; animation-delay: 0.00s; }
-    .cs-wave-bars span:nth-child(2)  { height: 40%; animation-delay: 0.08s; }
-    .cs-wave-bars span:nth-child(3)  { height: 65%; animation-delay: 0.16s; }
-    .cs-wave-bars span:nth-child(4)  { height: 85%; animation-delay: 0.24s; }
-    .cs-wave-bars span:nth-child(5)  { height: 100%; animation-delay: 0.32s; }
-    .cs-wave-bars span:nth-child(6)  { height: 75%; animation-delay: 0.40s; }
-    .cs-wave-bars span:nth-child(7)  { height: 50%; animation-delay: 0.48s; }
-    .cs-wave-bars span:nth-child(8)  { height: 90%; animation-delay: 0.56s; }
-    .cs-wave-bars span:nth-child(9)  { height: 60%; animation-delay: 0.64s; }
-    .cs-wave-bars span:nth-child(10) { height: 100%; animation-delay: 0.72s; }
-    .cs-wave-bars span:nth-child(11) { height: 70%; animation-delay: 0.80s; }
-    .cs-wave-bars span:nth-child(12) { height: 45%; animation-delay: 0.88s; }
-    .cs-wave-bars span:nth-child(13) { height: 80%; animation-delay: 0.96s; }
-    .cs-wave-bars span:nth-child(14) { height: 55%; animation-delay: 1.04s; }
-    .cs-wave-bars span:nth-child(15) { height: 95%; animation-delay: 1.12s; }
-    .cs-wave-bars span:nth-child(16) { height: 65%; animation-delay: 1.20s; }
-    .cs-wave-bars span:nth-child(17) { height: 35%; animation-delay: 1.28s; }
-    .cs-wave-bars span:nth-child(18) { height: 50%; animation-delay: 1.36s; }
-    .cs-wave-bars span:nth-child(19) { height: 25%; animation-delay: 1.44s; }
-    .cs-wave-bars span:nth-child(20) { height: 15%; animation-delay: 1.52s; }
+    .cs-wave-bars span:nth-child(1) {
+      height: 20%;
+      animation-delay: 0.00s;
+    }
+
+    .cs-wave-bars span:nth-child(2) {
+      height: 40%;
+      animation-delay: 0.08s;
+    }
+
+    .cs-wave-bars span:nth-child(3) {
+      height: 65%;
+      animation-delay: 0.16s;
+    }
+
+    .cs-wave-bars span:nth-child(4) {
+      height: 85%;
+      animation-delay: 0.24s;
+    }
+
+    .cs-wave-bars span:nth-child(5) {
+      height: 100%;
+      animation-delay: 0.32s;
+    }
+
+    .cs-wave-bars span:nth-child(6) {
+      height: 75%;
+      animation-delay: 0.40s;
+    }
+
+    .cs-wave-bars span:nth-child(7) {
+      height: 50%;
+      animation-delay: 0.48s;
+    }
+
+    .cs-wave-bars span:nth-child(8) {
+      height: 90%;
+      animation-delay: 0.56s;
+    }
+
+    .cs-wave-bars span:nth-child(9) {
+      height: 60%;
+      animation-delay: 0.64s;
+    }
+
+    .cs-wave-bars span:nth-child(10) {
+      height: 100%;
+      animation-delay: 0.72s;
+    }
+
+    .cs-wave-bars span:nth-child(11) {
+      height: 70%;
+      animation-delay: 0.80s;
+    }
+
+    .cs-wave-bars span:nth-child(12) {
+      height: 45%;
+      animation-delay: 0.88s;
+    }
+
+    .cs-wave-bars span:nth-child(13) {
+      height: 80%;
+      animation-delay: 0.96s;
+    }
+
+    .cs-wave-bars span:nth-child(14) {
+      height: 55%;
+      animation-delay: 1.04s;
+    }
+
+    .cs-wave-bars span:nth-child(15) {
+      height: 95%;
+      animation-delay: 1.12s;
+    }
+
+    .cs-wave-bars span:nth-child(16) {
+      height: 65%;
+      animation-delay: 1.20s;
+    }
+
+    .cs-wave-bars span:nth-child(17) {
+      height: 35%;
+      animation-delay: 1.28s;
+    }
+
+    .cs-wave-bars span:nth-child(18) {
+      height: 50%;
+      animation-delay: 1.36s;
+    }
+
+    .cs-wave-bars span:nth-child(19) {
+      height: 25%;
+      animation-delay: 1.44s;
+    }
+
+    .cs-wave-bars span:nth-child(20) {
+      height: 15%;
+      animation-delay: 1.52s;
+    }
 
     @keyframes csWave {
-      0%, 100% { transform: scaleY(1); }
-      50%       { transform: scaleY(0.2); }
+
+      0%,
+      100% {
+        transform: scaleY(1);
+      }
+
+      50% {
+        transform: scaleY(0.2);
+      }
     }
 
     /* ── Content ─ */
     .cs-content {
-      animation: fadeSlideUp 0.7s 0.1s cubic-bezier(.16,1,.3,1) both;
+      animation: fadeSlideUp 0.7s 0.1s cubic-bezier(.16, 1, .3, 1) both;
     }
 
     .cs-eyebrow {
@@ -493,7 +577,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      animation: fadeSlideUp 0.7s 0.3s cubic-bezier(.16,1,.3,1) both;
+      animation: fadeSlideUp 0.7s 0.3s cubic-bezier(.16, 1, .3, 1) both;
     }
 
     /* ── Footer ─ */
@@ -562,6 +646,7 @@
 
     /* ── Reduced motion ─ */
     @media (prefers-reduced-motion: reduce) {
+
       .cs-wave-bars span,
       .cs-waveform,
       .cs-content {
@@ -593,8 +678,8 @@
       target.setDate(target.getDate() + 90);
       target.setHours(0, 0, 0, 0);
 
-      const daysEl    = document.getElementById('days');
-      const hoursEl   = document.getElementById('hours');
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
       const minutesEl = document.getElementById('minutes');
       const secondsEl = document.getElementById('seconds');
 
@@ -603,24 +688,24 @@
       }
 
       function tick() {
-        const now  = Date.now();
+        const now = Date.now();
         const diff = target - now;
 
         if (diff <= 0) {
-          daysEl.textContent    = '00';
-          hoursEl.textContent   = '00';
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
           minutesEl.textContent = '00';
           secondsEl.textContent = '00';
           return;
         }
 
-        const days    = Math.floor(diff / 86400000);
-        const hours   = Math.floor((diff % 86400000) / 3600000);
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
         const minutes = Math.floor((diff % 3600000) / 60000);
         const seconds = Math.floor((diff % 60000) / 1000);
 
-        daysEl.textContent    = pad(days);
-        hoursEl.textContent   = pad(hours);
+        daysEl.textContent = pad(days);
+        hoursEl.textContent = pad(hours);
         minutesEl.textContent = pad(minutes);
         secondsEl.textContent = pad(seconds);
       }
@@ -629,16 +714,16 @@
       setInterval(tick, 1000);
 
       // ── Newsletter form ──────────────────────────────────
-      const form    = document.getElementById('cs-form');
-      const input   = document.getElementById('cs-email');
-      const errEl   = document.getElementById('cs-form-error');
-      const succEl  = document.getElementById('cs-form-success');
+      const form = document.getElementById('cs-form');
+      const input = document.getElementById('cs-email');
+      const errEl = document.getElementById('cs-form-error');
+      const succEl = document.getElementById('cs-form-success');
       const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (form) {
         form.addEventListener('submit', function (e) {
           e.preventDefault();
-          errEl.textContent  = '';
+          errEl.textContent = '';
           succEl.textContent = '';
           input.classList.remove('is-error');
 
@@ -682,4 +767,5 @@
   </script>
 
 </body>
+
 </html>

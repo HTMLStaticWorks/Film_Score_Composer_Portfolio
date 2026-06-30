@@ -1,10 +1,8 @@
-/* ═══════════════════════════════════════════════════════════
-   CineTone — RTL Overrides
-   ═══════════════════════════════════════════════════════════ */
+/* ===========================================================
+   CineTone - RTL Overrides
+   =========================================================== */
 
-[dir="rtl"] {
-  /* Flip direction-specific decorative elements */
-}
+
 
 [dir="rtl"] .hero-eyebrow { flex-direction: row-reverse; }
 [dir="rtl"] .nav-logo { flex-direction: row-reverse; }
@@ -27,8 +25,25 @@
 [dir="rtl"] .prose blockquote { border-inline-start: none; border-inline-end: 3px solid var(--accent); padding-inline-start: 0; padding-inline-end: var(--space-md); }
 [dir="rtl"] .reel-track { animation-direction: reverse; }
 [dir="rtl"] .contact-info-item { flex-direction: row-reverse; }
-[dir="rtl"] .footer-social { flex-direction: row-reverse; }
-[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .footer-social {
+  justify-content: flex-start;
+}
+[dir="rtl"] .footer-bottom {
+  flex-direction: row;
+}
+
+[dir="rtl"] .footer-grid {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-brand .nav-logo {
+  justify-content: flex-end !important;
+}
+
+[dir="rtl"] .footer-link:hover {
+  transform: translateX(-4px);
+}
+
 [dir="rtl"] .form-select {
   background-position: left 1rem center;
 }
