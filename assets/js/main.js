@@ -335,6 +335,34 @@ function initPlayer() {
   });
 }
 
+/* ─── BACK TO TOP ───────────────────────────────────────── */
+function initBackToTop() {
+  // Avoid creating duplicate buttons if script runs twice
+  if (document.getElementById('back-to-top')) return;
+
+  const btn = document.createElement('button');
+  btn.id = 'back-to-top';
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<i class="ph ph-arrow-up"></i>';
+  document.body.appendChild(btn);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
 /* ─── INIT ──────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -347,6 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initForms();
   initPlayer();
+  initBackToTop();
 
   document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
     btn.addEventListener('click', toggleTheme);
@@ -356,3 +385,4 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', toggleRTL);
   });
 });
+
