@@ -3066,6 +3066,12 @@ html[data-vt="shrink"]::view-transition-new(root) { z-index: 1; }
     gap: var(--space-lg);
   }
 
+  .about-layout {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-lg);
+  }
+
   .service-steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
