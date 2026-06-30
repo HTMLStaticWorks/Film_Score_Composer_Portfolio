@@ -51,8 +51,31 @@
   </aside>
 
   <main>
-    <section class="section about" style="padding-block-start:calc(72px + var(--space-xl));"
-      aria-label="About Marcus Hale">
+    <!-- Page Header -->
+    <section class="page-header"
+      style="padding-block-start:calc(72px + var(--space-xl));padding-block-end:var(--space-xl);background:var(--bg-secondary);border-block-end:1px solid var(--border);"
+      aria-label="About header">
+      <div class="page-header-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+        <span class="note note-1">&#9835;</span>
+        <span class="note note-2">&#9834;</span>
+        <span class="note note-3">&#9836;</span>
+        <span class="equalizer"><i></i><i></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="container">
+        <span class="section-eyebrow">About Me</span>
+        <h1
+          style="font-size:clamp(2.5rem,5vw,var(--s-h1));max-width:700px;margin-block:var(--space-sm) var(--space-md);">
+          The story behind<br><em style="color:var(--accent);">the sound</em>
+        </h1>
+        <p style="max-width:540px;font-size:var(--s-lead);color:var(--text-secondary);">London and Berlin-based film
+          score composer and sound designer crafting immersive sonic worlds for cinema, games, and trailers.</p>
+      </div>
+    </section>
+
+    <section class="section about" aria-label="About Marcus Hale">
       <div class="container">
         <div class="about-layout">
           <div class="about-image-wrap reveal">
@@ -61,38 +84,33 @@
             <div class="about-image-accent" aria-label="8 years experience">8<small>yrs</small></div>
           </div>
           <div class="about-content reveal">
-            <span class="section-eyebrow">About Me</span>
-            <h1 style="font-size:clamp(2rem,4vw,var(--s-h2));margin-block-end:var(--space-md);">Marcus Hale</h1>
+            <h2 style="font-size:clamp(2rem,4vw,var(--s-h2));margin-block-end:var(--space-md);">Marcus Hale</h2>
             <p class="about-lead">"I grew up watching films twice — once for the story, once for what the music was
               doing to me."</p>
             <div class="about-body">
               <p>I'm a film score composer and sound designer based between London and Berlin. After studying at the
-                Royal College of Music, I spent three years as an orchestrator at Paramount Europe — a period that
-                taught me that the most important tool in a composer's kit isn't a plugin or a sample library. It's
-                listening.</p>
+                Royal College of Music, I spent three years as an orchestrator at Paramount Europe.</p>
               <p style="margin-block-start:1rem;">In 2020, I scored my first solo film credit — a documentary called The
                 Weight of Stars. It won Best Sound at the Edinburgh Documentary Film Festival. More importantly, it made
                 me certain this was the work I was built for.</p>
               <p style="margin-block-start:1rem;">Since then, I've worked on feature films, AAA game titles, and
-                high-profile trailer campaigns. I take on 4–6 major projects per year, which means the work I accept
-                gets my full attention — not a fraction of it.</p>
-              <p style="margin-block-start:1rem;">I believe the best scores don't call attention to themselves. They
-                quietly make you feel something you didn't expect.</p>
-            </div>
-            <div class="about-skills">
-              <span class="skill-tag">Orchestral</span>
-              <span class="skill-tag">Modular Synth</span>
-              <span class="skill-tag">Wwise Certified</span>
-              <span class="skill-tag">Logic Pro X</span>
-              <span class="skill-tag">Nuendo 13</span>
-              <span class="skill-tag">Spitfire Audio</span>
-              <span class="skill-tag">Hybrid Scoring</span>
-              <span class="skill-tag">Live Session Recording</span>
-              <span class="skill-tag">Sound Design</span>
-              <span class="skill-tag">Stem Mixing</span>
+                high-profile trailer campaigns.</p>
+
             </div>
             <a href="contact.html" class="btn btn-primary"><i class="ph ph-paper-plane-tilt"></i> Work With Me</a>
           </div>
+        </div>
+        <div class="about-skills reveal" style="margin-block-start:var(--space-xl);">
+          <span class="skill-tag">Orchestral</span>
+          <span class="skill-tag">Modular Synth</span>
+          <span class="skill-tag">Wwise Certified</span>
+          <span class="skill-tag">Logic Pro X</span>
+          <span class="skill-tag">Nuendo 13</span>
+          <span class="skill-tag">Spitfire Audio</span>
+          <span class="skill-tag">Hybrid Scoring</span>
+          <span class="skill-tag">Live Session Recording</span>
+          <span class="skill-tag">Sound Design</span>
+          <span class="skill-tag">Stem Mixing</span>
         </div>
       </div>
     </section>
@@ -151,7 +169,7 @@
           <div>
             <h4 style="font-size:1.1rem;margin-block-end:var(--space-md);">Education</h4>
             <div style="display:flex;flex-direction:column;gap:var(--space-sm);">
-              <div style="padding:var(--space-md);border:1px solid var(--border);background:var(--bg-primary);">
+              <div class="credential-card">
                 <div
                   style="font-size:var(--s-caption);color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-block-end:0.25rem;">
                   2013–2016</div>
@@ -159,7 +177,7 @@
                   Composition</div>
                 <div style="font-size:var(--s-caption);color:var(--text-muted);">Royal College of Music, London</div>
               </div>
-              <div style="padding:var(--space-md);border:1px solid var(--border);background:var(--bg-primary);">
+              <div class="credential-card">
                 <div
                   style="font-size:var(--s-caption);color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-block-end:0.25rem;">
                   2018</div>
@@ -172,16 +190,16 @@
           <div>
             <h4 style="font-size:1.1rem;margin-block-end:var(--space-md);">Recognition</h4>
             <div style="display:flex;flex-direction:column;gap:var(--space-sm);">
-              <div style="padding:var(--space-md);border:1px solid var(--border);background:var(--bg-primary);">
+              <div class="credential-card">
                 <div
                   style="font-size:var(--s-caption);color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-block-end:0.25rem;">
                   2020</div>
                 <div style="font-size:var(--s-label);font-weight:var(--w-label);color:var(--text-primary);">Best Sound
                   Award</div>
-                <div style="font-size:var(--s-caption);color:var(--text-muted);">Edinburgh Documentary Film Festival
+                <div style="font-size:var(--s-caption);color:var(--text-muted);">Edinburgh Film Festival
                 </div>
               </div>
-              <div style="padding:var(--space-md);border:1px solid var(--border);background:var(--bg-primary);">
+              <div class="credential-card">
                 <div
                   style="font-size:var(--s-caption);color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-block-end:0.25rem;">
                   2023</div>

@@ -60,9 +60,18 @@
 
   <main>
     <!-- Page Hero -->
-    <section
+    <section class="page-header"
       style="padding-block-start:calc(72px + var(--space-xl));padding-block-end:var(--space-xl);background:var(--bg-secondary);border-block-end:1px solid var(--border);"
       aria-label="Services overview">
+      <div class="page-header-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+        <span class="note note-1">&#9835;</span>
+        <span class="note note-2">&#9834;</span>
+        <span class="note note-3">&#9836;</span>
+        <span class="equalizer"><i></i><i></i><i></i><i></i><i></i></span>
+      </div>
       <div class="container">
         <span class="section-eyebrow">What I Offer</span>
         <h1
@@ -81,37 +90,27 @@
           <span class="section-eyebrow" style="text-align:center;display:block;">Process</span>
           <h2 class="section-heading">How we work together</h2>
         </div>
-        <div
-          style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);"
-          class="reveal">
-          <div style="background:var(--bg-primary);padding:var(--space-lg) var(--space-md);text-align:center;">
-            <div
-              style="font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--border-strong);line-height:1;margin-block-end:var(--space-sm);">
-              01</div>
+        <div class="service-steps-grid reveal">
+          <div class="service-step-card">
+            <div class="service-step-num">01</div>
             <h3 style="font-size:1.2rem;margin-block-end:0.5rem;">Discovery Call</h3>
             <p style="font-size:var(--s-label);color:var(--text-muted);">30–45 min conversation about the project, its
               emotional goals, and what success looks like.</p>
           </div>
-          <div style="background:var(--bg-primary);padding:var(--space-lg) var(--space-md);text-align:center;">
-            <div
-              style="font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--border-strong);line-height:1;margin-block-end:var(--space-sm);">
-              02</div>
+          <div class="service-step-card">
+            <div class="service-step-num">02</div>
             <h3 style="font-size:1.2rem;margin-block-end:0.5rem;">Spotting Session</h3>
             <p style="font-size:var(--s-label);color:var(--text-muted);">We watch together and mark every moment where
               music enters, exits, and transforms.</p>
           </div>
-          <div style="background:var(--bg-primary);padding:var(--space-lg) var(--space-md);text-align:center;">
-            <div
-              style="font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--border-strong);line-height:1;margin-block-end:var(--space-sm);">
-              03</div>
+          <div class="service-step-card">
+            <div class="service-step-num">03</div>
             <h3 style="font-size:1.2rem;margin-block-end:0.5rem;">Composition Rounds</h3>
             <p style="font-size:var(--s-label);color:var(--text-muted);">Two rounds of revisions included. I share
               in-progress cues as I go — no surprises at delivery.</p>
           </div>
-          <div style="background:var(--bg-primary);padding:var(--space-lg) var(--space-md);text-align:center;">
-            <div
-              style="font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--border-strong);line-height:1;margin-block-end:var(--space-sm);">
-              04</div>
+          <div class="service-step-card">
+            <div class="service-step-num">04</div>
             <h3 style="font-size:1.2rem;margin-block-end:0.5rem;">Final Delivery</h3>
             <p style="font-size:var(--s-label);color:var(--text-muted);">Stems, mixed cues, and all master files. Music
               publishing and licensing handled transparently.</p>

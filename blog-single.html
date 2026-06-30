@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How I built 4 hours of adaptive music — CineTone Journal</title>
-  <meta name="description" content="Marcus Hale on building a 68-stem Wwise adaptive music system for the video game Echoes of Veil." />
+  <meta name="description"
+    content="Marcus Hale on building a 68-stem Wwise adaptive music system for the video game Echoes of Veil." />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
 </head>
+
 <body>
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="nav-logo"><span class="nav-logo-mark" aria-hidden="true"><i class="ph ph-waveform"></i></span> CineTone</a>
+      <a href="index.html" class="nav-logo"><span class="nav-logo-mark" aria-hidden="true"><i
+            class="ph ph-waveform"></i></span> CineTone</a>
       <ul class="nav-links" role="list">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="home2.html" class="nav-link">Home 2</a></li>
@@ -21,34 +25,51 @@
         <li><a href="blog.html" class="nav-link active">Journal</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="nav-icon-btn" data-theme-toggle id="theme-toggle-nav" aria-label="Toggle theme"><i class="theme-icon ph ph-moon"></i></button>
-        <button class="nav-icon-btn" data-rtl-toggle id="rtl-toggle-nav" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+        <button class="nav-icon-btn" data-theme-toggle id="theme-toggle-nav" aria-label="Toggle theme"><i
+            class="theme-icon ph ph-moon"></i></button>
+        <button class="nav-icon-btn" data-rtl-toggle id="rtl-toggle-nav" aria-label="Toggle RTL"><i
+            class="ph ph-arrows-left-right"></i></button>
         <a href="contact.html" class="nav-reach-btn">Reach Me</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"
+        aria-controls="drawer"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <div class="drawer-overlay" id="drawer-overlay"></div>
   <aside class="drawer" id="drawer" aria-label="Mobile navigation">
-    <div class="drawer-header"><a href="index.html" class="nav-logo"><span class="nav-logo-mark" aria-hidden="true"><i class="ph ph-waveform"></i></span> CineTone</a><button class="drawer-close" id="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button></div>
-    <nav class="drawer-nav"><a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html" class="active">Journal</a></nav>
-    <div class="drawer-footer"><div class="drawer-actions"><button class="nav-icon-btn" data-theme-toggle aria-label="Toggle theme"><i class="theme-icon ph ph-moon"></i></button><button class="nav-icon-btn" data-rtl-toggle aria-label="Toggle direction"><i class="ph ph-arrows-left-right"></i></button></div><a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Reach Me</a></div>
+    <div class="drawer-header"><a href="index.html" class="nav-logo"><span class="nav-logo-mark" aria-hidden="true"><i
+            class="ph ph-waveform"></i></span> CineTone</a><button class="drawer-close" id="drawer-close"
+        aria-label="Close menu"><i class="ph ph-x"></i></button></div>
+    <nav class="drawer-nav"><a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a
+        href="services.html">Services</a><a href="blog.html" class="active">Journal</a></nav>
+    <div class="drawer-footer">
+      <div class="drawer-actions"><button class="nav-icon-btn" data-theme-toggle aria-label="Toggle theme"><i
+            class="theme-icon ph ph-moon"></i></button><button class="nav-icon-btn" data-rtl-toggle
+          aria-label="Toggle direction"><i class="ph ph-arrows-left-right"></i></button></div><a href="contact.html"
+        class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Reach Me</a>
+    </div>
   </aside>
 
   <main>
     <section class="blog-single-hero" aria-label="Article header">
       <div class="container">
-        <a href="blog.html" class="btn btn-ghost" style="margin-block-end:var(--space-md);display:inline-flex;align-items:center;gap:0.4rem;"><i class="ph ph-arrow-left"></i> Back to Journal</a>
+        <a href="blog.html" class="btn btn-ghost"
+          style="margin-block-end:var(--space-md);display:inline-flex;align-items:center;gap:0.4rem;"><i
+            class="ph ph-arrow-left"></i> Back to Journal</a>
         <div class="blog-meta">
           <span class="blog-tag">Game Audio</span>
           <span class="blog-date">June 3, 2026</span>
-          <span class="blog-date" style="display:flex;align-items:center;gap:0.3rem;"><i class="ph ph-clock"></i> 9 min read</span>
+          <span class="blog-date" style="display:flex;align-items:center;gap:0.3rem;"><i class="ph ph-clock"></i> 9 min
+            read</span>
         </div>
-        <h1 class="blog-single-hero" style="padding:0;background:none;border:none;">How I built 4 hours of adaptive music for Echoes of Veil</h1>
+        <h1 class="blog-single-hero" style="padding:0;background:none;border:none;">How I built 4 hours of adaptive
+          music for Echoes of Veil</h1>
         <div style="display:flex;align-items:center;gap:var(--space-sm);margin-block-start:var(--space-md);">
-          <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=60&q=80" alt="Marcus Hale" style="width:44px;height:44px;border-radius:50%;object-fit:cover;filter:grayscale(20%);" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=60&q=80" alt="Marcus Hale"
+            style="width:44px;height:44px;border-radius:50%;object-fit:cover;filter:grayscale(20%);" loading="lazy" />
           <div>
-            <div style="font-size:var(--s-label);font-weight:var(--w-label);color:var(--text-primary);">Marcus Hale</div>
+            <div style="font-size:var(--s-label);font-weight:var(--w-label);color:var(--text-primary);">Marcus Hale
+            </div>
             <div style="font-size:var(--s-caption);color:var(--text-muted);">Film Score Composer</div>
           </div>
         </div>
@@ -58,82 +79,114 @@
     <section class="blog-single-content" aria-label="Article content">
       <div class="container">
         <div class="prose">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=900&q=80" alt="Echoes of Veil game world" style="width:100%;height:400px;object-fit:cover;filter:grayscale(15%);margin-block-end:var(--space-lg);" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=900&q=80"
+            alt="Echoes of Veil game world"
+            style="width:100%;height:400px;object-fit:cover;filter:grayscale(15%);margin-block-end:var(--space-lg);"
+            loading="lazy" />
 
           <h2>The brief that arrived at 2am</h2>
-          <p>Lars Brandt sent me a three-paragraph email on a Tuesday night: they had an open-world fantasy RPG, nine biomes, 40+ hours of potential playtime, and a hard launch date eight months away. They wanted adaptive music that felt like it was alive — not just looping.</p>
+          <p>Lars Brandt sent me a three-paragraph email on a Tuesday night: they had an open-world fantasy RPG, nine
+            biomes, 40+ hours of potential playtime, and a hard launch date eight months away. They wanted adaptive
+            music that felt like it was alive — not just looping.</p>
           <p>What followed was the most technically complex project I've taken on. Here's what I learned.</p>
 
           <h2>Starting with emotion, not systems</h2>
-          <p>Before I touched Wwise, before I opened a single session in Logic, I spent a week with the game's art bible and the lead designer's notes. The central emotional question was: what does it feel like to be the last guardian of a dying world?</p>
-          <p>That single question became the anchor for every musical decision. The overworld theme needed to feel ancient and fragile. Combat music needed to feel desperate, not triumphant. The safe zones needed to feel like grief relieved, not joy.</p>
+          <p>Before I touched Wwise, before I opened a single session in Logic, I spent a week with the game's art bible
+            and the lead designer's notes. The central emotional question was: what does it feel like to be the last
+            guardian of a dying world?</p>
+          <p>That single question became the anchor for every musical decision. The overworld theme needed to feel
+            ancient and fragile. Combat music needed to feel desperate, not triumphant. The safe zones needed to feel
+            like grief relieved, not joy.</p>
 
-          <blockquote>The best adaptive system in the world is useless if you haven't answered the emotional question first. Technology serves story — never the other way around.</blockquote>
+          <blockquote>The best adaptive system in the world is useless if you haven't answered the emotional question
+            first. Technology serves story — never the other way around.</blockquote>
 
           <h2>The stem architecture</h2>
-          <p>I ended up composing 68 stems across 22 distinct pieces of music. Each piece could exist in five states: ambient, exploration, tension, combat, and resolution. The stems were designed to be subtracted from, not added to — I wrote the full dense version first, then isolated layers that could be removed as the player calmed.</p>
-          <p>This approach — subtractive rather than additive — produced more natural transitions. Instead of new instruments appearing, familiar ones faded away. It felt organic because it was.</p>
+          <p>I ended up composing 68 stems across 22 distinct pieces of music. Each piece could exist in five states:
+            ambient, exploration, tension, combat, and resolution. The stems were designed to be subtracted from, not
+            added to — I wrote the full dense version first, then isolated layers that could be removed as the player
+            calmed.</p>
+          <p>This approach — subtractive rather than additive — produced more natural transitions. Instead of new
+            instruments appearing, familiar ones faded away. It felt organic because it was.</p>
 
           <h2>What I'd do differently</h2>
-          <p>I underestimated how long Wwise implementation would take. I budgeted three weeks and needed six. If I were starting again, I'd build the implementation schedule in parallel with the composition phase, not after it.</p>
-          <p>I'd also involve the sound designers earlier. The line between music and sound design should blur in a project like this, and getting them into the Wwise session from the beginning would have saved several tense revision rounds.</p>
+          <p>I underestimated how long Wwise implementation would take. I budgeted three weeks and needed six. If I were
+            starting again, I'd build the implementation schedule in parallel with the composition phase, not after it.
+          </p>
+          <p>I'd also involve the sound designers earlier. The line between music and sound design should blur in a
+            project like this, and getting them into the Wwise session from the beginning would have saved several tense
+            revision rounds.</p>
 
-          <p>The project shipped in November 2023. Players report that the music "feels alive" — which is exactly what Lars asked for at 2am that Tuesday. Some things you get right.</p>
+          <p>The project shipped in November 2023. Players report that the music "feels alive" — which is exactly what
+            Lars asked for at 2am that Tuesday. Some things you get right.</p>
 
-          <div style="margin-block-start:var(--space-xl);padding:var(--space-lg);border:1px solid var(--border);background:var(--bg-secondary);">
+          <div
+            style="margin-block-start:var(--space-xl);padding:var(--space-lg);border:1px solid var(--border);background:var(--bg-secondary);">
             <h3 style="font-size:1.2rem;margin-block-end:var(--space-sm);">Working on a game audio project?</h3>
-            <p style="font-size:var(--s-label);margin-block-end:var(--space-md);">I take on select game scoring projects. Tell me about yours.</p>
+            <p style="font-size:var(--s-label);margin-block-end:var(--space-md);">I take on select game scoring
+              projects. Tell me about yours.</p>
             <a href="contact.html" class="btn btn-primary"><i class="ph ph-game-controller"></i> Send a Brief</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- More Posts -->
-    <section class="section" style="background:var(--bg-secondary);" aria-label="Related articles">
-      <div class="container">
-        <h2 class="section-heading" style="margin-block-end:var(--space-lg);">More from the Journal</h2>
-        <div class="blog-grid reveal" style="grid-template-columns:repeat(2,1fr);">
-          <article class="blog-card">
-            <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&q=80" alt="Silence in film music" class="blog-card-image" loading="lazy" /></a>
-            <div class="blog-card-body">
-              <div class="blog-meta"><span class="blog-tag">Film Scoring</span><span class="blog-date">April 18, 2026</span></div>
-              <h3><a href="blog-single.html">The most powerful note a composer can write is a rest</a></h3>
-              <p>On silence, restraint, and learning to protect space in a score.</p>
-            </div>
-            <div class="blog-card-footer">
-              <div class="blog-author"><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=60&q=80" alt="Marcus Hale" loading="lazy" /> Marcus Hale</div>
-              <a href="blog-single.html" class="btn-ghost btn" style="padding-inline:0;">Read <i class="ph ph-arrow-right"></i></a>
-            </div>
-          </article>
-          <article class="blog-card">
-            <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80" alt="Modular synthesis" class="blog-card-image" loading="lazy" /></a>
-            <div class="blog-card-body">
-              <div class="blog-meta"><span class="blog-tag">Electronic</span><span class="blog-date">February 2, 2026</span></div>
-              <h3><a href="blog-single.html">Why I use modular synthesis when orchestral tools would be easier</a></h3>
-              <p>On unpredictability as a compositional tool.</p>
-            </div>
-            <div class="blog-card-footer">
-              <div class="blog-author"><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=60&q=80" alt="Marcus Hale" loading="lazy" /> Marcus Hale</div>
-              <a href="blog-single.html" class="btn-ghost btn" style="padding-inline:0;">Read <i class="ph ph-arrow-right"></i></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+
   </main>
 
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex;margin-block-end:1rem;"><span class="nav-logo-mark" aria-hidden="true"><i class="ph ph-waveform"></i></span> CineTone</a><p>Orchestral and electronic film scores by Marcus Hale. London · Berlin.</p><div class="footer-social"><a href="#" class="social-link" aria-label="SoundCloud"><i class="ph ph-soundcloud-logo"></i></a><a href="#" class="social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a><a href="#" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a><a href="#" class="social-link" aria-label="IMDB"><i class="ph ph-film-strip"></i></a></div></div>
-        <div><h4 class="footer-col-title">Navigate</h4><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="home2.html" class="footer-link">Home 2</a></li><li><a href="services.html" class="footer-link">Services</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
-        <div><h4 class="footer-col-title">Work</h4><ul class="footer-links"><li><a href="blog.html" class="footer-link">Journal</a></li><li><a href="index.html#demo-reel" class="footer-link">Demo Reel</a></li><li><a href="404.html" class="footer-link">404</a></li><li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li></ul></div>
-        <div><h4 class="footer-col-title">Contact</h4><ul class="footer-links"><li><span class="footer-link">marcus@cinetone.com</span></li><li><span class="footer-link">London, UK</span></li><li><a href="contact.html" class="footer-link" style="color:var(--accent);margin-block-start:0.5rem;">→ Collaboration Form</a></li></ul></div>
+        <div class="footer-brand"><a href="index.html" class="nav-logo"
+            style="display:inline-flex;margin-block-end:1rem;"><span class="nav-logo-mark" aria-hidden="true"><i
+                class="ph ph-waveform"></i></span> CineTone</a>
+          <p>Orchestral and electronic film scores by Marcus Hale. London · Berlin.</p>
+          <div class="footer-social"><a href="#" class="social-link" aria-label="SoundCloud"><i
+                class="ph ph-soundcloud-logo"></i></a><a href="#" class="social-link" aria-label="YouTube"><i
+                class="ph ph-youtube-logo"></i></a><a href="#" class="social-link" aria-label="Instagram"><i
+                class="ph ph-instagram-logo"></i></a><a href="#" class="social-link" aria-label="IMDB"><i
+                class="ph ph-film-strip"></i></a></div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Work</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html" class="footer-link">Journal</a></li>
+            <li><a href="index.html#demo-reel" class="footer-link">Demo Reel</a></li>
+            <li><a href="404.html" class="footer-link">404</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link">marcus@cinetone.com</span></li>
+            <li><span class="footer-link">London, UK</span></li>
+            <li><a href="contact.html" class="footer-link" style="color:var(--accent);margin-block-start:0.5rem;">→
+                Collaboration Form</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom"><div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;"><p class="footer-copy">© 2026 Marcus Hale / CineTone. All rights reserved.</p><div class="footer-bottom-links"><a href="#" class="footer-link">Privacy</a><a href="#" class="footer-link">Terms</a></div></div></div>
+    <div class="footer-bottom">
+      <div class="container"
+        style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <p class="footer-copy">© 2026 Marcus Hale / CineTone. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#" class="footer-link">Privacy</a><a href="#"
+            class="footer-link">Terms</a></div>
+      </div>
+    </div>
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

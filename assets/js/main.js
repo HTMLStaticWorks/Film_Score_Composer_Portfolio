@@ -13,12 +13,66 @@ function initTheme() {
   updateThemeIcons(theme);
 }
 
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
+function applyTheme(next) {
   document.documentElement.setAttribute('data-theme', next);
   localStorage.setItem('cinetone-theme', next);
   updateThemeIcons(next);
+}
+
+function toggleTheme(e) {
+  const root = document.documentElement;
+  const current = root.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // No View Transitions support (or reduced motion) → switch instantly.
+  if (!document.startViewTransition || reduceMotion) {
+    applyTheme(next);
+    return;
+  }
+
+  // Origin = the clicked toggle's centre (falls back to top-right corner).
+  let x = window.innerWidth - 48;
+  let y = 48;
+  const trigger = e && e.currentTarget;
+  if (trigger && trigger.getBoundingClientRect) {
+    const r = trigger.getBoundingClientRect();
+    x = r.left + r.width / 2;
+    y = r.top + r.height / 2;
+  } else if (e && typeof e.clientX === 'number' && e.clientX) {
+    x = e.clientX;
+    y = e.clientY;
+  }
+
+  // Radius needed to reach the farthest corner from the origin.
+  const endRadius = Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y)
+  );
+
+  const expand = next === 'dark'; // new theme spreads out from the icon
+  root.dataset.vt = expand ? 'expand' : 'shrink';
+
+  const transition = document.startViewTransition(() => applyTheme(next));
+
+  transition.ready.then(() => {
+    const from = `circle(0px at ${x}px ${y}px)`;
+    const to = `circle(${endRadius}px at ${x}px ${y}px)`;
+    const opts = { duration: 550, easing: 'ease-in-out' };
+
+    if (expand) {
+      // New (dark) theme is revealed by a circle growing from the icon.
+      root.animate({ clipPath: [from, to] },
+        { ...opts, pseudoElement: '::view-transition-new(root)' });
+    } else {
+      // Old (dark) theme shrinks back into the icon, uncovering light beneath.
+      root.animate({ clipPath: [to, from] },
+        { ...opts, pseudoElement: '::view-transition-old(root)' });
+    }
+  });
+
+  transition.finished.finally(() => { delete root.dataset.vt; });
 }
 
 function updateThemeIcons(theme) {
