@@ -983,7 +983,7 @@ p {
 
 .work-card p {
   font-size: var(--s-label);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -2139,7 +2139,7 @@ textarea.form-control {
 
 .blog-card p {
   font-size: var(--s-label);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1.6;
   flex: 1;
 }
@@ -2406,7 +2406,7 @@ textarea.form-control {
 
 .mini-testimonial-role {
   font-size: var(--s-caption);
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 /* ─── PROCESS SECTION ─────────────────────────────────── */
@@ -2464,7 +2464,7 @@ textarea.form-control {
 
 .process-step-body p {
   font-size: var(--s-body);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1.65;
 }
 
